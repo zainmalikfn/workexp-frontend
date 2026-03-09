@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Work Experience Registration | NatWest</title>
+  <link href="https://fonts.googleapis.com/css2?family=REM:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#" class="nw-logo" aria-label="NatWest Home">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 54" height="40" fill="none">
+        <g transform="translate(2,6)">
+          <polygon points="21,3 38,12 21,21 4,12" fill="#fff"/>
+          <polygon points="4,12 21,21 21,38 4,29" fill="rgba(255,255,255,0.50)"/>
+          <polygon points="38,12 21,21 21,38 38,29" fill="rgba(255,255,255,0.72)"/>
+        </g>
+        <text x="56" y="36" font-family="REM,'Helvetica Neue',Arial,sans-serif" font-weight="700" font-size="26" fill="#fff" letter-spacing="-0.4">NatWest</text>
+      </svg>
+    </a>
+    <nav class="main-nav">
+      <a href="#" class="active">Careers &amp; Education</a>
+    </nav>
+  </div>
+</header>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb-bar">
+  <div class="breadcrumb-inner">
+    <a href="#">Home</a><span class="bsep">›</span>
+    <a href="#">Education &amp; Careers</a><span class="bsep">›</span>
+    <span>Work Experience Registration</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge"><span class="dot"></span>Applications Open · 2025</div>
+      <h1>Student Work Experience<br>Registration</h1>
+      <p>Join NatWest's award-winning work experience programme. Build real skills, gain genuine insight into banking and finance, and take your first confident step towards your future career.</p>
+      <div class="hero-ctas">
+        <a href="#regform" class="btn-pri">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          Apply Now
+        </a>
+        <a href="#faqs" class="btn-out">Learn More</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hc-lbl">Placements Available</div>
+      <div class="hc-val">2025</div>
+      <div class="hc-sub">Year 10–13 &amp; College Students</div>
+      <div class="hc-div">
+        <div class="hc-lbl">Duration</div>
+        <div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:2px;">1–2 Weeks</div>
+        <div class="hc-sub">Flexible dates available</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INFO STRIP -->
+<div class="info-strip">
+  <div class="info-inner">
+    <div class="ichip"><div class="ichip-icon">🎓</div>Years 10–13 &amp; FE</div>
+    <div class="ichip"><div class="ichip-icon">📅</div>1–2 Week Placements</div>
+    <div class="ichip"><div class="ichip-icon">🏦</div>Multiple Departments</div>
+    <div class="ichip"><div class="ichip-icon">🔒</div>UK GDPR Compliant</div>
+    <div class="ichip"><div class="ichip-icon">✉️</div>Reply Within 5–7 Days</div>
+  </div>
+</div>
+
+<!-- PAGE BODY -->
+<div class="page-body">
+
+  <!-- FORM -->
+  <main id="regform">
+    <div class="form-card">
+      <div class="form-card-head">
+        <h2>Work Experience Registration Form</h2>
+        <p>Fields marked <strong style="color:#f9a8d4;">*</strong> are required. Please complete all sections accurately.</p>
+      </div>
+      <div class="form-body">
+
+        <div class="steps">
+          <div class="step active"><div class="step-num">1</div><div class="step-lbl">Student Details</div></div>
+          <div class="step"><div class="step-num">2</div><div class="step-lbl">School Details</div></div>
+          <div class="step"><div class="step-num">3</div><div class="step-lbl">Placement</div></div>
+          <div class="step"><div class="step-num">4</div><div class="step-lbl">Declarations</div></div>
+        </div>
+
+        <form id="regForm" novalidate>
+
+          <!-- 1: STUDENT -->
+          <div class="sec">
+            <div class="sec-head"><div class="sec-icon">1</div>Student Details</div>
+            <div class="fg">
+              <div class="ff"><label class="fl" for="fn">First Name <span class="rq">*</span></label><input class="fi" type="text" id="fn" placeholder="e.g. Emma" required><span class="ferr" id="fnE">Please enter the student's first name.</span></div>
+              <div class="ff"><label class="fl" for="ln">Last Name <span class="rq">*</span></label><input class="fi" type="text" id="ln" placeholder="e.g. Johnson" required><span class="ferr" id="lnE">Please enter the student's last name.</span></div>
+              <div class="ff"><label class="fl" for="se">Student Email <span class="rq">*</span></label><input class="fi" type="email" id="se" placeholder="student@school.ac.uk" required><span class="ferr" id="seE">Please enter a valid email address.</span></div>
+              <div class="ff"><label class="fl" for="dob">Date of Birth <span class="rq">*</span></label><input class="fi" type="date" id="dob" required><span class="ferr" id="dobE">Please enter the student's date of birth.</span></div>
+              <div class="ff"><label class="fl" for="gd">Gender <span class="rq">*</span></label><select class="fs" id="gd" required><option value="">— Please select —</option><option>Male</option><option>Female</option><option>Non-binary</option><option>Prefer not to say</option></select><span class="ferr" id="gdE">Please select a gender.</span></div>
+              <div class="ff"><label class="fl" for="yr">Year Group <span class="rq">*</span></label><select class="fs" id="yr" required><option value="">— Please select —</option><option>Year 10</option><option>Year 11</option><option>Year 12</option><option>Year 13</option><option>College / Further Education</option></select><span class="ferr" id="yrE">Please select a year group.</span></div>
+              <div class="ff"><label class="fl" for="sphone">Student Phone</label><input class="fi" type="tel" id="sphone" placeholder="+44 7700 000000"></div>
+              <div class="ff"><label class="fl" for="eth">Ethnicity <span style="font-weight:400;color:var(--nw-gray-400);font-size:12px;">(optional)</span></label><select class="fs" id="eth"><option value="">— Prefer not to say —</option><option>Asian or Asian British</option><option>Black, African, Caribbean or Black British</option><option>Mixed or Multiple ethnic groups</option><option>White</option><option>Other ethnic group</option></select><span class="fhint">Voluntary — helps us ensure inclusive access.</span></div>
+              <div class="ff"><label class="fl" for="en">Emergency Contact Name <span class="rq">*</span></label><input class="fi" type="text" id="en" placeholder="Parent / Guardian name" required><span class="ferr" id="enE">Please enter an emergency contact name.</span></div>
+              <div class="ff"><label class="fl" for="ep">Emergency Contact Phone <span class="rq">*</span></label><input class="fi" type="tel" id="ep" placeholder="+44 7700 000000" required><span class="ferr" id="epE">Please enter an emergency contact phone.</span></div>
+            </div>
+          </div>
+
+          <!-- 2: SCHOOL -->
+          <div class="sec">
+            <div class="sec-head"><div class="sec-icon">2</div>School Details</div>
+            <div class="fg">
+              <div class="ff span2"><label class="fl" for="sn">School / College Name <span class="rq">*</span></label><input class="fi" type="text" id="sn" placeholder="e.g. Oakwood Secondary School" required><span class="ferr" id="snE">Please enter the school name.</span></div>
+              <div class="ff"><label class="fl" for="sml">School Email <span class="rq">*</span></label><input class="fi" type="email" id="sml" placeholder="info@school.ac.uk" required><span class="ferr" id="smlE">Please enter a valid school email.</span></div>
+              <div class="ff"><label class="fl" for="sph">School Phone <span class="rq">*</span></label><input class="fi" type="tel" id="sph" placeholder="+44 1234 567890" required><span class="ferr" id="sphE">Please enter the school phone number.</span></div>
+              <div class="ff span2"><label class="fl" for="tn">Responsible Teacher / Tutor <span class="rq">*</span></label><input class="fi" type="text" id="tn" placeholder="Full name of supervising teacher" required><span class="ferr" id="tnE">Please enter the teacher's name.</span></div>
+              <div class="ff span2">
+                <label class="fl" for="pc">School Postcode <span class="rq">*</span></label>
+                <div class="pc-row"><input class="fi" type="text" id="pc" placeholder="e.g. EC2M 4AA" required><button type="button" class="pc-btn" id="pcBtn" onclick="doPC()">Find Address</button></div>
+                <span class="fhint">Enter postcode and click Find Address to auto-fill.</span>
+                <span class="ferr" id="pcE">Please enter a valid UK postcode.</span>
+                <div id="addrBlock" style="display:none;">
+                  <div class="addr-grid">
+                    <div class="ff span2"><label class="fl">Address Line 1</label><input class="fi" type="text" id="a1" placeholder="Building / Street"></div>
+                    <div class="ff span2"><label class="fl">Address Line 2</label><input class="fi" type="text" id="a2" placeholder="Area (optional)"></div>
+                    <div class="ff"><label class="fl">Town / City</label><input class="fi" type="text" id="city"></div>
+                    <div class="ff"><label class="fl">County</label><input class="fi" type="text" id="county"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3: PLACEMENT -->
+          <div class="sec">
+            <div class="sec-head"><div class="sec-icon">3</div>Placement Preferences</div>
+            <div class="fg">
+              <div class="ff"><label class="fl" for="sd">Preferred Start Date <span class="rq">*</span></label><input class="fi" type="date" id="sd" required><span class="ferr" id="sdE">Please select a start date.</span></div>
+              <div class="ff"><label class="fl" for="ed">Preferred End Date <span class="rq">*</span></label><input class="fi" type="date" id="ed" required><span class="ferr" id="edE">Please select an end date.</span></div>
+              <div class="ff span2"><label class="fl" for="ind">Preferred Department <span class="rq">*</span></label><select class="fs" id="ind" required><option value="">— Select area of interest —</option><option>Technology &amp; Digital Banking</option><option>Retail Banking &amp; Customer Service</option><option>Finance &amp; Accounting</option><option>Risk &amp; Compliance</option><option>Marketing &amp; Communications</option><option>Human Resources &amp; Talent</option><option>Operations &amp; Data</option><option>Legal</option><option>Sustainability &amp; ESG</option><option>Other</option></select><span class="ferr" id="indE">Please select a department.</span></div>
+              <div class="ff span2"><label class="fl" for="mot">Why are you applying? <span class="rq">*</span></label><textarea class="ft" id="mot" rows="3" placeholder="Tell us what you hope to gain and why this placement interests you..." required></textarea><span class="ferr" id="motE">Please provide a short statement of interest.</span></div>
+              <div class="ff span2"><label class="fl" for="req">Accessibility / Special Requirements</label><textarea class="ft" id="req" rows="2" placeholder="Optional — e.g. wheelchair access, dietary needs, neurodiversity support..."></textarea></div>
+            </div>
+          </div>
+
+          <!-- 4: DECLARATIONS -->
+          <div class="sec">
+            <div class="sec-head"><div class="sec-icon">4</div>Declarations &amp; Consent</div>
+            <div class="cg">
+              <label class="ci"><input type="checkbox" id="c1" required><span class="ct">I confirm that all information provided is accurate and complete. <span class="rq">*</span></span></label>
+              <label class="ci"><input type="checkbox" id="c2" required><span class="ct">I confirm that written parental or guardian consent has been obtained for this student to participate in the NatWest Work Experience Programme. <span class="rq">*</span></span></label>
+              <label class="ci"><input type="checkbox" id="c3" required><span class="ct">I have read and agree to the <a href="#">Terms &amp; Conditions</a> and <a href="#">Privacy Policy</a>. I understand personal data will be processed under UK GDPR solely for administering this placement. <span class="rq">*</span></span></label>
+              <label class="ci"><input type="checkbox" id="cm"><span class="ct">I am happy to receive information about future NatWest careers events and graduate opportunities. (Optional)</span></label>
+            </div>
+            <span class="ferr" id="conE" style="margin-top:10px;">Please tick all required declarations before submitting.</span>
+          </div>
+
+          <div class="form-foot">
+            <button type="submit" class="sub-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Submit Registration
+            </button>
+            <div class="fnote">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#9e9e9e" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              Your data is encrypted and stored securely in line with UK GDPR.
+            </div>
+          </div>
+        </form>
+
+        <div class="success-panel" id="successPanel">
+          <div class="spi">✅</div>
+          <h3>Registration Submitted Successfully!</h3>
+          <p>Thank you for applying. A confirmation email has been sent. Our team will be in touch within <strong>5–7 working days</strong> to confirm your placement details.</p>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sc">
+      <div class="sc-head">Key Information</div>
+      <div class="sc-body">
+        <ul class="ki">
+          <li><span>🎓</span><div><span class="ki-lbl">Eligibility</span>Years 10–13 &amp; Further Education, aged 14+</div></li>
+          <li><span>📅</span><div><span class="ki-lbl">Duration</span>1–2 weeks (5–10 working days)</div></li>
+          <li><span>💼</span><div><span class="ki-lbl">Payment</span>Unpaid educational placement</div></li>
+          <li><span>⏱</span><div><span class="ki-lbl">Response Time</span>5–7 working days after submission</div></li>
+          <li><span>📋</span><div><span class="ki-lbl">Required Docs</span>Parental consent &amp; school authorisation</div></li>
+          <li><span>👔</span><div><span class="ki-lbl">Dress Code</span>Smart casual unless otherwise notified</div></li>
+        </ul>
+      </div>
+    </div>
+    <div class="sc">
+      <div class="sc-head">Need Help?</div>
+      <div class="sc-body">
+        <p>Our team is here to support you through the application process.</p>
+        <a class="cl" href="mailto:workexperience@natwest.com"><span>✉️</span>workexperience@natwest.com</a>
+        <a class="cl" href="tel:03457888444"><span>📞</span>03457 888 444</a>
+        <a class="cl" href="#"><span>💬</span>Live Chat (Mon–Fri, 8am–6pm)</a>
+      </div>
+    </div>
+    <div class="sc">
+      <div class="sc-head">What to Expect</div>
+      <div class="sc-body">
+        <p>During your placement you may:</p>
+        <ul style="padding-left:16px;font-size:13px;color:var(--nw-gray-600);line-height:1.8;margin-top:6px;">
+          <li>Shadow professionals in real meetings</li>
+          <li>Assist with live projects &amp; research</li>
+          <li>Attend team briefings &amp; company tours</li>
+          <li>Complete a short placement project</li>
+          <li>Receive a reference letter on completion</li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+</div>
+
+<!-- FAQ -->
+<section class="faq-section" id="faqs">
+  <div class="faq-inner">
+    <div class="faq-title">Frequently Asked Questions</div>
+    <div class="faq-sub">Everything you need to know about the NatWest Work Experience Programme.</div>
+    <div class="faq-grid" id="faqG"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="fg4">
+      <div class="footer-brand">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 44" height="34" fill="none">
+          <g transform="translate(2,4)"><polygon points="17,3 31,10 17,17 3,10" fill="#fff"/><polygon points="3,10 17,17 17,30 3,23" fill="rgba(255,255,255,.5)"/><polygon points="31,10 17,17 17,30 31,23" fill="rgba(255,255,255,.7)"/></g>
+          <text x="42" y="30" font-family="REM,'Helvetica Neue',Arial,sans-serif" font-weight="700" font-size="21" fill="#fff">NatWest</text>
+        </svg>
+        <p>NatWest is committed to supporting the next generation of talent through our award-winning work experience and early careers programmes.</p>
+      </div>
+      <div class="fc">
+        <h4>Education</h4>
+        <ul><li><a href="#">Work Experience</a></li><li><a href="#">Insight Days</a></li><li><a href="#">Student Accounts</a></li><li><a href="#">Graduate Programmes</a></li><li><a href="#">Apprenticeships</a></li></ul>
+      </div>
+      <div class="fc">
+        <h4>Help &amp; Support</h4>
+        <ul><li><a href="#">Contact Us</a></li><li><a href="#">Accessibility</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Complaints</a></li><li><a href="#">Fraud Prevention</a></li></ul>
+      </div>
+      <div class="fc">
+        <h4>About NatWest</h4>
+        <ul><li><a href="#">Our Purpose</a></li><li><a href="#">Sustainability</a></li><li><a href="#">Investor Relations</a></li><li><a href="#">Media Centre</a></li><li><a href="#">NatWest Group</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-btm">
+      <p>© 2025 National Westminster Bank Plc. Registered in England and Wales (No. 929027). Authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority.</p>
+      <div class="flegal"><a href="#">Privacy</a><a href="#">Cookies</a><a href="#">Accessibility</a><a href="#">Terms</a><a href="#">Sitemap</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
