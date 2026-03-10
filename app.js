@@ -1,5 +1,44 @@
 // Change this to your Render URL when you deploy
-var API_URL = "http://localhost:8000"
+var API_URL = "https://workexp-backend.onrender.com"
+
+
+/* ── STEP COMPLETION ─────────────────────────────────────────────────────── */
+
+// Which required fields belong to each section
+var sectionFields = {
+  step1: ['fn', 'ln', 'se', 'dob', 'gd', 'yr', 'en', 'ep'],
+  step2: ['sn', 'sml', 'sph', 'tn'],
+  step3: ['sd', 'ed', 'ind', 'mot'],
+  step4: ['c1', 'c2', 'c3']
+}
+
+// Shade a step circle when all its required fields are filled
+function updateSteps() {
+  Object.keys(sectionFields).forEach(function(stepId) {
+    var allFilled = sectionFields[stepId].every(function(fieldId) {
+      var el = document.getElementById(fieldId)
+      if (!el) return false
+      if (el.type === 'checkbox') return el.checked
+      return el.value.trim() !== ''
+    })
+    var stepEl = document.getElementById(stepId)
+    if (allFilled) {
+      stepEl.classList.add('active')
+    } else {
+      // Step 1 stays shaded by default, others unshade if incomplete
+      if (stepId !== 'step1') stepEl.classList.remove('active')
+    }
+  })
+}
+
+// Run whenever any field changes
+document.getElementById('regForm').addEventListener('input', updateSteps)
+document.getElementById('regForm').addEventListener('change', updateSteps)
+
+// Smooth scroll to a section when a step circle is clicked
+function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'start' })
+}
 
 
 /* ── POSTCODE LOOKUP ─────────────────────────────────────────────────────── */
@@ -21,7 +60,7 @@ async function doPC() {
     var d = await r.json()
     if (d.status === 200) {
       var x = d.result
-      document.getElementById('a2').value   = x.parish || ''
+      document.getElementById('a2').value    = x.parish || ''
       document.getElementById('city').value  = x.admin_district || x.parliamentary_constituency || ''
       document.getElementById('county').value = x.admin_county || x.region || ''
       pcEl.value = x.postcode

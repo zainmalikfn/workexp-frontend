@@ -76,9 +76,10 @@ a:hover { color: var(--nw-purple-dark); }
 
 /* STEPS */
 .steps { display:flex; margin-bottom:32px; border-bottom:1px solid var(--nw-border); }
-.step { flex:1; display:flex; flex-direction:column; align-items:center; gap:6px; padding-bottom:14px; border-bottom:3px solid transparent; position:relative; bottom:-1px; }
+.step { flex:1; display:flex; flex-direction:column; align-items:center; gap:6px; padding-bottom:14px; border-bottom:3px solid transparent; position:relative; bottom:-1px; cursor:pointer; }
 .step.active { border-bottom-color:var(--nw-purple); }
-.step-num { width:28px;height:28px;border-radius:50%;background:var(--nw-gray-200);color:var(--nw-gray-600);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center; }
+.step:hover .step-num { background:var(--nw-purple-light); color:#fff; }
+.step-num { width:28px;height:28px;border-radius:50%;background:var(--nw-gray-200);color:var(--nw-gray-600);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;transition:background .15s; }
 .step.active .step-num { background:var(--nw-purple); color:#fff; }
 .step-lbl { font-size:11px;color:var(--nw-gray-600);font-weight:500;text-align:center; }
 .step.active .step-lbl { color:var(--nw-purple);font-weight:700; }
@@ -211,3 +212,9 @@ a:hover { color: var(--nw-purple-dark); }
   .steps{display:none;}
   .info-inner{flex-wrap:wrap;}
 }
+
+/* COMPLETED STEP — green filled circle when section is done */
+.step.completed .step-num { background: var(--nw-success); color: #fff; }
+.step.completed .step-lbl { color: var(--nw-success); font-weight: 700; }
+.step.completed { border-bottom-color: var(--nw-success); cursor: pointer; }
+.step { cursor: pointer; }
