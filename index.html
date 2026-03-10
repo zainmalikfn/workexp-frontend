@@ -88,17 +88,17 @@
       </div>
       <div class="form-body">
 
-        <div class="steps" id="formSteps">
-          <div class="step active" id="step1" onclick="scrollToSection('sec1')"><div class="step-num">1</div><div class="step-lbl">Student Details</div></div>
-          <div class="step" id="step2" onclick="scrollToSection('sec2')"><div class="step-num">2</div><div class="step-lbl">School Details</div></div>
-          <div class="step" id="step3" onclick="scrollToSection('sec3')"><div class="step-num">3</div><div class="step-lbl">Placement</div></div>
-          <div class="step" id="step4" onclick="scrollToSection('sec4')"><div class="step-num">4</div><div class="step-lbl">Declarations</div></div>
+        <div class="steps">
+          <div class="step active"><div class="step-num">1</div><div class="step-lbl">Student Details</div></div>
+          <div class="step"><div class="step-num">2</div><div class="step-lbl">School Details</div></div>
+          <div class="step"><div class="step-num">3</div><div class="step-lbl">Placement</div></div>
+          <div class="step"><div class="step-num">4</div><div class="step-lbl">Declarations</div></div>
         </div>
 
         <form id="regForm" novalidate>
 
           <!-- 1: STUDENT -->
-          <div class="sec" id="sec1">
+          <div class="sec">
             <div class="sec-head"><div class="sec-icon">1</div>Student Details</div>
             <div class="fg">
               <div class="ff"><label class="fl" for="fn">First Name <span class="rq">*</span></label><input class="fi" type="text" id="fn" placeholder="e.g. Emma" required><span class="ferr" id="fnE">Please enter the student's first name.</span></div>
@@ -115,7 +115,7 @@
           </div>
 
           <!-- 2: SCHOOL -->
-          <div class="sec" id="sec2">
+          <div class="sec">
             <div class="sec-head"><div class="sec-icon">2</div>School Details</div>
             <div class="fg">
               <div class="ff span2"><label class="fl" for="sn">School / College Name <span class="rq">*</span></label><input class="fi" type="text" id="sn" placeholder="e.g. Oakwood Secondary School" required><span class="ferr" id="snE">Please enter the school name.</span></div>
@@ -140,7 +140,7 @@
           </div>
 
           <!-- 3: PLACEMENT -->
-          <div class="sec" id="sec3">
+          <div class="sec">
             <div class="sec-head"><div class="sec-icon">3</div>Placement Preferences</div>
             <div class="fg">
               <div class="ff"><label class="fl" for="sd">Preferred Start Date <span class="rq">*</span></label><input class="fi" type="date" id="sd" required><span class="ferr" id="sdE">Please select a start date.</span></div>
@@ -152,7 +152,7 @@
           </div>
 
           <!-- 4: DECLARATIONS -->
-          <div class="sec" id="sec4">
+          <div class="sec">
             <div class="sec-head"><div class="sec-icon">4</div>Declarations &amp; Consent</div>
             <div class="cg">
               <label class="ci"><input type="checkbox" id="c1" required><span class="ct">I confirm that all information provided is accurate and complete. <span class="rq">*</span></span></label>
@@ -172,12 +172,6 @@
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#9e9e9e" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
               Your data is encrypted and stored securely in line with UK GDPR.
             </div>
-          </div>
-
-          <div style="text-align:center; margin-top:16px;">
-            <a href="#formSteps" onclick="document.getElementById('formSteps').scrollIntoView({behavior:'smooth'}); return false;" style="font-size:13px; color:var(--nw-purple); font-weight:600;">
-              ↑ Review your entries
-            </a>
           </div>
         </form>
 
@@ -210,7 +204,7 @@
       <div class="sc-head">Need Help?</div>
       <div class="sc-body">
         <p>Our team is here to support you through the application process.</p>
-        <a class="cl" href="/cdn-cgi/l/email-protection#53243c2138362b2336213a363d3036133d3227243620277d303c3e"><span>✉️</span><span class="__cf_email__" data-cfemail="85f2eaf7eee0fdf5e0f7ece0ebe6e0c5ebe4f1f2e0f6f1abe6eae8">[email&#160;protected]</span></a>
+        <a class="cl" href="mailto:workexperience@natwest.com"><span>✉️</span>workexperience@natwest.com</a>
         <a class="cl" href="tel:03457888444"><span>📞</span>03457 888 444</a>
         <a class="cl" href="#"><span>💬</span>Live Chat (Mon–Fri, 8am–6pm)</a>
       </div>
@@ -267,4 +261,11 @@
     </div>
     <div class="footer-btm">
       <p>© 2025 National Westminster Bank Plc. Registered in England and Wales (No. 929027). Authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority.</p>
-      <div class="flegal"><a href="#">Privacy</a><a href="#">Cookies</a><a href="
+      <div class="flegal"><a href="#">Privacy</a><a href="#">Cookies</a><a href="#">Accessibility</a><a href="#">Terms</a><a href="#">Sitemap</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
