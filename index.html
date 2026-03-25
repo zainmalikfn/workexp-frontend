@@ -41,7 +41,7 @@
 <section class="hero">
   <div class="hero-inner">
     <div>
-      <div class="hero-badge"><span class="dot"></span>Applications Open · 2025</div>
+      <div class="hero-badge"><span class="dot"></span>Applications Open · 2026</div>
       <h1>Student Work Experience<br>Registration</h1>
       <p>Join NatWest's award-winning work experience programme. Build real skills, gain genuine insight into banking and finance, and take your first confident step towards your future career.</p>
       <div class="hero-ctas">
@@ -54,8 +54,8 @@
     </div>
     <div class="hero-card">
       <div class="hc-lbl">Placements Available</div>
-      <div class="hc-val">2025</div>
-      <div class="hc-sub">Year 10–13 &amp; College Students</div>
+      <div class="hc-val">2026</div>
+      <div class="hc-sub">Students aged 16+</div>
       <div class="hc-div">
         <div class="hc-lbl">Duration</div>
         <div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:2px;">1–2 Weeks</div>
@@ -68,7 +68,7 @@
 <!-- INFO STRIP -->
 <div class="info-strip">
   <div class="info-inner">
-    <div class="ichip"><div class="ichip-icon">🎓</div>Years 10–13 &amp; FE</div>
+    <div class="ichip"><div class="ichip-icon">🎓</div>Students aged 16+</div>
     <div class="ichip"><div class="ichip-icon">📅</div>1–2 Week Placements</div>
     <div class="ichip"><div class="ichip-icon">🏦</div>Multiple Departments</div>
     <div class="ichip"><div class="ichip-icon">🔒</div>UK GDPR Compliant</div>
@@ -88,17 +88,17 @@
       </div>
       <div class="form-body">
 
-        <div class="steps">
-          <div class="step active"><div class="step-num">1</div><div class="step-lbl">Student Details</div></div>
-          <div class="step"><div class="step-num">2</div><div class="step-lbl">School Details</div></div>
-          <div class="step"><div class="step-num">3</div><div class="step-lbl">Placement</div></div>
-          <div class="step"><div class="step-num">4</div><div class="step-lbl">Declarations</div></div>
+        <div class="steps" id="formSteps">
+          <div class="step active" id="step1" onclick="scrollToSection('sec1')"><div class="step-num">1</div><div class="step-lbl">Student Details</div></div>
+          <div class="step" id="step2" onclick="scrollToSection('sec2')"><div class="step-num">2</div><div class="step-lbl">School Details</div></div>
+          <div class="step" id="step3" onclick="scrollToSection('sec3')"><div class="step-num">3</div><div class="step-lbl">Placement</div></div>
+          <div class="step" id="step4" onclick="scrollToSection('sec4')"><div class="step-num">4</div><div class="step-lbl">Declarations</div></div>
         </div>
 
         <form id="regForm" novalidate>
 
           <!-- 1: STUDENT -->
-          <div class="sec">
+          <div class="sec" id="sec1">
             <div class="sec-head"><div class="sec-icon">1</div>Student Details</div>
             <div class="fg">
               <div class="ff"><label class="fl" for="fn">First Name <span class="rq">*</span></label><input class="fi" type="text" id="fn" placeholder="e.g. Emma" required><span class="ferr" id="fnE">Please enter the student's first name.</span></div>
@@ -115,7 +115,7 @@
           </div>
 
           <!-- 2: SCHOOL -->
-          <div class="sec">
+          <div class="sec" id="sec2">
             <div class="sec-head"><div class="sec-icon">2</div>School Details</div>
             <div class="fg">
               <div class="ff span2"><label class="fl" for="sn">School / College Name <span class="rq">*</span></label><input class="fi" type="text" id="sn" placeholder="e.g. Oakwood Secondary School" required><span class="ferr" id="snE">Please enter the school name.</span></div>
@@ -140,7 +140,7 @@
           </div>
 
           <!-- 3: PLACEMENT -->
-          <div class="sec">
+          <div class="sec" id="sec3">
             <div class="sec-head"><div class="sec-icon">3</div>Placement Preferences</div>
             <div class="fg">
               <div class="ff"><label class="fl" for="sd">Preferred Start Date <span class="rq">*</span></label><input class="fi" type="date" id="sd" required><span class="ferr" id="sdE">Please select a start date.</span></div>
@@ -152,7 +152,7 @@
           </div>
 
           <!-- 4: DECLARATIONS -->
-          <div class="sec">
+          <div class="sec" id="sec4">
             <div class="sec-head"><div class="sec-icon">4</div>Declarations &amp; Consent</div>
             <div class="cg">
               <label class="ci"><input type="checkbox" id="c1" required><span class="ct">I confirm that all information provided is accurate and complete. <span class="rq">*</span></span></label>
@@ -173,6 +173,12 @@
               Your data is encrypted and stored securely in line with UK GDPR.
             </div>
           </div>
+
+          <div style="text-align:center; margin-top:16px;">
+            <a href="#formSteps" onclick="document.getElementById('formSteps').scrollIntoView({behavior:'smooth'}); return false;" style="font-size:13px; color:var(--nw-purple); font-weight:600;">
+              ↑ Review your entries
+            </a>
+          </div>
         </form>
 
         <div class="success-panel" id="successPanel">
@@ -191,7 +197,7 @@
       <div class="sc-head">Key Information</div>
       <div class="sc-body">
         <ul class="ki">
-          <li><span>🎓</span><div><span class="ki-lbl">Eligibility</span>Years 10–13 &amp; Further Education, aged 14+</div></li>
+          <li><span>🎓</span><div><span class="ki-lbl">Eligibility</span>Students aged 16+</div></li>
           <li><span>📅</span><div><span class="ki-lbl">Duration</span>1–2 weeks (5–10 working days)</div></li>
           <li><span>💼</span><div><span class="ki-lbl">Payment</span>Unpaid educational placement</div></li>
           <li><span>⏱</span><div><span class="ki-lbl">Response Time</span>5–7 working days after submission</div></li>
@@ -205,8 +211,6 @@
       <div class="sc-body">
         <p>Our team is here to support you through the application process.</p>
         <a class="cl" href="mailto:workexperience@natwest.com"><span>✉️</span>workexperience@natwest.com</a>
-        <a class="cl" href="tel:03457888444"><span>📞</span>03457 888 444</a>
-        <a class="cl" href="#"><span>💬</span>Live Chat (Mon–Fri, 8am–6pm)</a>
       </div>
     </div>
     <div class="sc">
@@ -260,7 +264,7 @@
       </div>
     </div>
     <div class="footer-btm">
-      <p>© 2025 National Westminster Bank Plc. Registered in England and Wales (No. 929027). Authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority.</p>
+      <p>© 2026 National Westminster Bank Plc. Registered in England and Wales (No. 929027). Authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority.</p>
       <div class="flegal"><a href="#">Privacy</a><a href="#">Cookies</a><a href="#">Accessibility</a><a href="#">Terms</a><a href="#">Sitemap</a></div>
     </div>
   </div>
